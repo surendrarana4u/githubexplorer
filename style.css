@@ -1,0 +1,251 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/*  HERO / FRONT PAGE */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 22px 40px;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    max-width: 620px;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 35px;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 14px;
+}
+
+.search-box input {
+    width: 330px;
+    padding: 16px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 18px rgba(0, 198, 255, 0.9);
+}
+
+.search-box button {
+    padding: 16px 28px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.7);
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 30px 20px;
+}
+
+/* ERROR MESSAGE */
+.error {
+    text-align: center;
+    color: #ff7675;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* PROFILE CARD */
+.profile {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+    animation: slideUp 0.7s ease;
+}
+
+.profile img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 4px solid #00c6ff;
+}
+
+.profile-info h2 {
+    font-size: 1.9rem;
+}
+
+.profile-info p {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+.profile-info a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 18px;
+    background: #00c6ff;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.profile-info a:hover {
+    background: #0072ff;
+    color: #fff;
+}
+
+/* STATS */
+.stats {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+/* REPOSITORIES */
+#repoTitle {
+    text-align: center;
+    margin: 35px 0 20px;
+    font-size: 1.9rem;
+}
+
+.repo-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+}
+
+/* REPO CARD */
+.repo-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 198, 255, 0.5);
+}
+
+.repo-card a {
+    font-size: 1.15rem;
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.repo-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 90%;
+    }
+}

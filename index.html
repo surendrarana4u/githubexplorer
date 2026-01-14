@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub User Explorer</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FRONT PAGE -->
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">GitHub Explorer</h1>
+        </nav>
+
+        <div class="hero-content">
+            <h2>Explore GitHub Profiles</h2>
+            <p>
+                Search any GitHub user and instantly view profile details,
+                repositories, stars and social stats.
+            </p>
+
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="username" 
+                    placeholder="Enter GitHub username..."
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ERROR MESSAGE -->
+        <div id="error" class="error"></div>
+
+        <!-- USER PROFILE -->
+        <section id="profile" class="profile"></section>
+
+        <!-- REPOSITORIES -->
+        <section>
+            <h2 id="repoTitle"></h2>
+            <div id="repos" class="repo-container"></div>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
